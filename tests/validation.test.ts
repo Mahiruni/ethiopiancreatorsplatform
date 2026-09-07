@@ -1,0 +1,5 @@
+import { describe, expect, it } from "vitest";
+import { safeUrlSchema, usernameSchema, linkSchema } from "@/lib/validation/common";
+describe("username validation",()=>{it("normalizes a valid username",()=>expect(usernameSchema.parse(" Mahir_01 ")).toBe("mahir_01"));it("blocks reserved routes",()=>expect(usernameSchema.safeParse("admin").success).toBe(false));it("blocks path-like usernames",()=>expect(usernameSchema.safeParse("../admin").success).toBe(false));});
+describe("URL validation",()=>{it("accepts HTTPS",()=>expect(safeUrlSchema.safeParse("https://example.com").success).toBe(true));it("rejects executable schemes",()=>expect(safeUrlSchema.safeParse("javascript:alert(1)").success).toBe(false));});
+describe("link validation",()=>{it("allows headings without URLs",()=>expect(linkSchema.safeParse({type:"heading",title:"Work",url:null}).success).toBe(true));it("requires HTTP(S) for web links",()=>expect(linkSchema.safeParse({type:"standard",title:"Bad",url:"ftp://example.com"}).success).toBe(false));});

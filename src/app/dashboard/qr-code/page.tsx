@@ -1,0 +1,1 @@
+import {QrPanel}from"@/components/dashboard/qr-panel";import{getCurrentProfile}from"@/lib/data";import{publicEnv}from"@/lib/env";export default async function QR(){const{profile}=await getCurrentProfile();return <QrPanel profileUrl={`${publicEnv.NEXT_PUBLIC_APP_URL}/${profile.username}`}/>}

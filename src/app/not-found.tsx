@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { Logo } from "@/components/ui/logo";
+export default function NotFound(){return <main className="grid min-h-screen place-items-center bg-[#f7f8f4] px-5"><div className="max-w-lg text-center"><div className="flex justify-center"><Logo/></div><p className="eyebrow mt-10">404</p><h1 className="mt-3 text-4xl font-semibold tracking-[-.05em]">This link does not exist.</h1><p className="mt-4 text-sm leading-6 text-[#68716c]">The profile may have changed username, been unpublished, or the address may be incorrect.</p><div className="mt-7 flex justify-center gap-3"><Link className="btn-primary" href="/">Go home</Link><Link className="btn-secondary" href="/explore">Explore profiles</Link></div></div></main>}

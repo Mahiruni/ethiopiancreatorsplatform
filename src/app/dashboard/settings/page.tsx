@@ -1,0 +1,1 @@
+import {SettingsManager}from"@/components/dashboard/settings-manager";import{getCurrentProfile}from"@/lib/data";export default async function Settings(){const{profile,supabase}=await getCurrentProfile();const{data}=await supabase.auth.getUser();return <SettingsManager profile={profile} email={data.user?.email||data.user?.phone||"Account"}/>}

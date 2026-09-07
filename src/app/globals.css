@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f7f3;
+  --surface: #ffffff;
+  --surface-2: #eef1ea;
+  --text: #141816;
+  --muted: #68716c;
+  --line: rgba(20, 24, 22, 0.09);
+  --brand: #135d44;
+  --brand-2: #d6a744;
+  --danger: #b44343;
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid rgba(19, 93, 68, 0.35); outline-offset: 2px; }
+::selection { background: rgba(19, 93, 68, 0.16); }
+
+.container-shell { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+.card { background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: var(--radius); }
+.soft-shadow { box-shadow: 0 22px 60px rgba(30, 43, 36, 0.08); }
+.muted { color: var(--muted); }
+.brand-gradient { background: linear-gradient(135deg, #135d44 0%, #2d7c60 58%, #d6a744 125%); }
+.grid-fade {
+  background-image: linear-gradient(rgba(19,93,68,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(19,93,68,.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, #000, transparent 78%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}

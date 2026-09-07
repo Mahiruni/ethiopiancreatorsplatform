@@ -1,0 +1,2 @@
+import { Logo } from "@/components/ui/logo";
+export function AuthShell({children}:{children:React.ReactNode}){return <main className="min-h-screen bg-[#eef1ea] px-4 py-8"><div className="mx-auto flex max-w-5xl items-center justify-between"><Logo/><a href="/" className="text-sm font-semibold text-[#69716d]">Back home</a></div><div className="mx-auto grid min-h-[calc(100vh-100px)] max-w-5xl place-items-center">{children}</div></main>}

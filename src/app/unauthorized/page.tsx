@@ -1,0 +1,2 @@
+import { ButtonLink } from "@/components/ui/button";
+export default function Unauthorized(){return <main className="grid min-h-screen place-items-center px-5"><div className="text-center"><div className="text-xs font-bold uppercase tracking-[.15em] text-[#135d44]">403</div><h1 className="mt-3 text-4xl font-semibold tracking-tight">You do not have access to this area.</h1><p className="mt-3 text-[#68716c]">Permissions are enforced server-side.</p><ButtonLink href="/dashboard" className="mt-6">Back to dashboard</ButtonLink></div></main>}

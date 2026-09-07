@@ -1,0 +1,14 @@
+{
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "buildCommand": "npm run build",
+  "installCommand": "npm install --no-audit --no-fund",
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    }
+  ]
+}

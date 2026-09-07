@@ -1,0 +1,3 @@
+import { Logo } from "@/components/ui/logo";
+export const metadata={title:"Maintenance",robots:{index:false,follow:false}};
+export default function Maintenance(){return <main className="grid min-h-screen place-items-center bg-[#f7f8f4] px-5"><div className="max-w-lg text-center"><div className="flex justify-center"><Logo/></div><p className="eyebrow mt-10">Maintenance</p><h1 className="mt-3 text-4xl font-semibold tracking-[-.05em]">We’ll be back shortly.</h1><p className="mt-4 text-sm leading-6 text-[#68716c]">This page is available for planned maintenance windows. Production traffic should only be routed here intentionally.</p></div></main>}

@@ -1,0 +1,2 @@
+import { Sparkles } from "lucide-react";
+export function EmptyState({title,body,children}:{title:string;body:string;children?:React.ReactNode}){return <div className="card grid min-h-56 place-items-center p-8 text-center"><div><span className="mx-auto grid size-11 place-items-center rounded-2xl bg-[#edf3ef] text-[#135d44]"><Sparkles size={20}/></span><h3 className="mt-4 text-lg font-semibold">{title}</h3><p className="mx-auto mt-2 max-w-md text-sm leading-6 text-[#68716c]">{body}</p>{children&&<div className="mt-5">{children}</div>}</div></div>}

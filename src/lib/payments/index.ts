@@ -1,0 +1,3 @@
+import "server-only";import type{PaymentProvider}from"./types";import{ChapaProvider}from"./chapa";import{TelebirrProvider}from"./telebirr";import{UnavailableProvider}from"./unavailable";
+export function getPaymentProvider(name=process.env.PAYMENT_DEFAULT_PROVIDER||"unavailable"):PaymentProvider{if(name==="chapa")return new ChapaProvider();if(name==="telebirr")return new TelebirrProvider();return new UnavailableProvider();}
+export function paymentProviderStatus(){return{default:process.env.PAYMENT_DEFAULT_PROVIDER||"unavailable",chapa:Boolean(process.env.CHAPA_SECRET_KEY&&process.env.CHAPA_WEBHOOK_SECRET),telebirr:Boolean(process.env.TELEBIRR_APP_ID&&process.env.TELEBIRR_APP_KEY&&process.env.TELEBIRR_WEBHOOK_SECRET)}};

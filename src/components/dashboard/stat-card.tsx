@@ -1,0 +1,1 @@
+export function StatCard({label,value,detail}:{label:string;value:string|number;detail?:string}){return <article className="card p-5"><div className="text-xs font-bold uppercase tracking-[.1em] text-[#818985]">{label}</div><div className="mt-3 text-3xl font-semibold tracking-[-.04em]">{value}</div>{detail&&<div className="mt-2 text-xs text-[#79817d]">{detail}</div>}</article>}

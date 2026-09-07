@@ -1,0 +1,1 @@
+import {AdminShell}from"@/components/admin/admin-shell";import{requireRole}from"@/lib/supabase/auth";export default async function AdminLayout({children}:{children:React.ReactNode}){const{role}=await requireRole(["moderator","administrator","super_administrator"]);return <AdminShell role={role}>{children}</AdminShell>}

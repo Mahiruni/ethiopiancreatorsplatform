@@ -1,0 +1,1 @@
+import { AuthCard } from "@/components/auth/auth-card";import { AuthShell } from "@/components/auth/auth-shell";export default function Signup(){return <AuthShell><AuthCard mode="signup"/></AuthShell>}

@@ -1,0 +1,1 @@
+export default function Loading(){return <main className="container-shell py-12" aria-busy="true" aria-label="Loading"><div className="animate-pulse space-y-4"><div className="h-4 w-24 rounded bg-black/10"/><div className="h-10 w-2/3 rounded-2xl bg-black/10"/><div className="h-48 rounded-[28px] bg-black/[.06]"/></div></main>}

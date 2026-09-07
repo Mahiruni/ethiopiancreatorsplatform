@@ -1,0 +1,1 @@
+import { AppearanceEditor } from "@/components/dashboard/appearance-editor";import {getCurrentProfile,getProfileLinks}from"@/lib/data";export default async function Appearance(){const{profile}=await getCurrentProfile();const links=await getProfileLinks(profile.id);return <AppearanceEditor profile={profile} links={links}/>}

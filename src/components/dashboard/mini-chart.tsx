@@ -1,0 +1,1 @@
+export function MiniChart({values}:{values:number[]}){const max=Math.max(...values,1);return <div className="flex h-36 items-end gap-1.5" aria-label="Activity chart">{values.map((v,i)=><div key={i} className="flex-1 rounded-t-md bg-[#135d44]/80" style={{height:`${Math.max(4,(v/max)*100)}%`}} title={String(v)}/>)}</div>}
