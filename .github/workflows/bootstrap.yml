@@ -18,9 +18,13 @@ jobs:
       - name: Reconstruct source archive
         shell: bash
         run: |
+          cp .github/workflows/bootstrap.yml /tmp/bootstrap.yml
           cat .bootstrap/part* | base64 --decode > /tmp/linqo.tar.gz
           find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
           tar -xzf /tmp/linqo.tar.gz -C .
+          mkdir -p .github/workflows
+          cp /tmp/bootstrap.yml .github/workflows/bootstrap.yml
+          rm -f .github/workflows/ci.yml
       - name: Publish complete source tree
         shell: bash
         run: |
