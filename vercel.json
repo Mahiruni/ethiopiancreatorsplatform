@@ -1,8 +1,19 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "regions": ["fra1"],
   "buildCommand": "npm run build",
   "installCommand": "npm install --no-audit --no-fund",
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "https://pjjcvehiatrxjvggfmwd.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_VR_hhxmOXfBDUQbzWDSZ5Q_n_jBu1je"
+  },
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_SUPABASE_URL": "https://pjjcvehiatrxjvggfmwd.supabase.co",
+      "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_VR_hhxmOXfBDUQbzWDSZ5Q_n_jBu1je"
+    }
+  },
   "headers": [
     {
       "source": "/api/(.*)",
