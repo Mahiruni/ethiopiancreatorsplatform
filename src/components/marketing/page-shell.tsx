@@ -2,5 +2,23 @@ import { MarketingHeader } from "@/components/marketing/header";
 import { Footer } from "@/components/marketing/footer";
 
 export function MarketingPage({ eyebrow, title, intro, children }: { eyebrow:string; title:string; intro:string; children:React.ReactNode }) {
-  return <><MarketingHeader/><main><section className="py-16 sm:py-24"><div className="container-shell"><div className="max-w-3xl"><span className="text-xs font-bold uppercase tracking-[.14em] text-[#135d44]">{eyebrow}</span><h1 className="mt-4 text-5xl font-semibold leading-[.98] tracking-[-.055em] sm:text-7xl">{title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-[#65706a]">{intro}</p></div><div className="mt-14">{children}</div></div></section></main><Footer/></>;
+  return <>
+    <MarketingHeader/>
+    <main>
+      <section className="marketing-noise relative overflow-hidden pb-20 pt-16 sm:pb-24 sm:pt-24">
+        <div className="absolute inset-0 -z-10 grid-fade opacity-55"/>
+        <div className="container-shell relative">
+          <div className="grid gap-8 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+            <div><span className="eyebrow">{eyebrow}</span></div>
+            <div>
+              <h1 className="text-balance max-w-5xl text-[clamp(3.4rem,7.2vw,7rem)] font-semibold leading-[.88] tracking-[-.07em]">{title}</h1>
+              <p className="text-pretty mt-7 max-w-2xl text-base leading-7 text-[#626d65] sm:text-lg sm:leading-8">{intro}</p>
+            </div>
+          </div>
+          <div className="mt-16 sm:mt-20">{children}</div>
+        </div>
+      </section>
+    </main>
+    <Footer/>
+  </>;
 }
