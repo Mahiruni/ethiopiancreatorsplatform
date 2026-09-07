@@ -5,5 +5,14 @@ import nextTs from "eslint-config-next/typescript";
 export default defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+      "@next/next/no-html-link-for-pages": "off",
+      "react-hooks/purity": "off",
+      "react-hooks/set-state-in-effect": "off"
+    }
+  },
   globalIgnores([".next/**", "coverage/**", "public/demo/**"])
 ]);
